@@ -4,3 +4,14 @@
     .text-center.w-full{:class => "lg:w-2/3"}
       %h1.title-font.sm:text-4xl.text-3xl.mb-4.font-medium.text-gray-900= @recipe.title
       %p.mb-8.leading-relaxed= raw(@recipe.html_description)
+
+      %a.inline-flex.items-center.p-2
+        %img.w-12.h-12.rounded-full.flex-shrink-0.object-cover.object-center{src: "https://dummyimage.com/104x104"}/
+        %span.flex-grow.flex.flex-col.pl-4
+          %span.title-font.font-medium.text-gray-900= @recipe.chef&.name || 'Unknown'
+          %span.text-gray-400.text-xs.tracking-widest{:class => "mt-0.5"} CHEF
+
+      - if @recipe.tags.any?
+        %ul.list-disc.list-inside.p-2
+          - @recipe.tags.each do |tag|
+            %li= tag.name

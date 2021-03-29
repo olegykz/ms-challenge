@@ -57,6 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 # Custom gems
+gem 'awesome_print'
 gem 'contentful_model'
 gem 'dotenv-rails'
 gem 'haml-rails'
@@ -64,5 +65,3 @@ gem 'redcarpet'
 gem 'rubocop'
 gem 'rubocop-rails'
 gem 'rubocop-rspec'
-
-# gem "tailwindcss-rails", "~> 0.3.3"
