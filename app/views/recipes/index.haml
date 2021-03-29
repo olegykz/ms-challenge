@@ -1,0 +1,7 @@
+.row
+  - @collection.each do |recipe|
+    .col
+      = link_to recipe_path(recipe.id) do
+        %figure.figure
+          = image_tag recipe.photo.url(w: 500), class: 'img-thumbnail'
+          %figcaption.figure-caption= recipe.title
