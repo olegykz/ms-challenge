@@ -1,3 +1,13 @@
-%h2.recipe_title= @recipe.title
-.description= raw(@recipe.html_description)
-.photo= image_tag @recipe.photo.url
+-# .p-4{:class => "md:w-1/2"}
+-#   .h-full.border-2.border-gray-200.border-opacity-60.rounded-lg.overflow-hidden
+-#   %img.lg:h-48.md:h-36.w-full.object-cover.object-center{src: @recipe.photo.url}/
+-#   .p-6
+-#     %h1.title-font.text-lg.font-medium.text-gray-900.mb-3= @recipe.title
+
+
+%section.text-gray-600.body-font
+  .container.mx-auto.flex.px-5.py-24.items-center.justify-center.flex-col
+    %img.mb-10.object-cover.object-center.rounded{class: "lg:w-2/6 md:w-3/6 w-5/6", src: @recipe.photo.url}/
+    .text-center.w-full{:class => "lg:w-2/3"}
+      %h1.title-font.sm:text-4xl.text-3xl.mb-4.font-medium.text-gray-900= @recipe.title
+      %p.mb-8.leading-relaxed= raw(@recipe.html_description)
